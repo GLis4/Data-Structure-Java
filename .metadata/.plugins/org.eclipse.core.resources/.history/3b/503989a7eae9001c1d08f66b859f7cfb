@@ -1,0 +1,52 @@
+package aulas.estrutura_dados.desafio.pilhas;
+
+import java.util.Scanner;
+import java.util.Stack;
+
+public class Biblioteca {
+	public static Stack<Livro> livros = new Stack<Livro>();
+	public static Scanner sc = new Scanner(System.in);
+
+	public static void main(String[] args) {
+		int op = -1;
+		while(op!= 0) {
+			System.out.println("Selecione a opção...");
+			op = Integer.parseInt(sc.nextLine());
+			switch (op) {
+			case 1:
+				inserir();
+				break;
+			case 2: 
+				System.out.println(mostrar());
+				break;
+			}
+		}
+	}
+
+	public static void inserir() {
+
+		Livro livro = new Livro();
+		System.out.println("Nome");
+		livro.nome = sc.nextLine();
+		System.out.println("isbn");
+		livro.isbn = Integer.parseInt(sc.nextLine());
+		System.out.println("ano de lancamento");
+		livro.lancamento = Integer.parseInt(sc.nextLine());
+		System.out.println("autor");
+		livro.autor = sc.nextLine();
+		livros.push(livro);
+	}
+
+	public static String mostrar() {
+		String result = "";
+		result += livros.pop().nome;
+		result += "\n" + livros.pop().isbn;
+		result += "\n" + livros.pop().lancamento;
+		result += "\n" + livros.pop().autor;
+		return result;
+
+	}
+	
+	
+}
+

@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\Users\Lisa\Documents\academico\Aulas-Programacao\aulas-estrutura-dados-java\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+1467800137.index
+4030717476.index
