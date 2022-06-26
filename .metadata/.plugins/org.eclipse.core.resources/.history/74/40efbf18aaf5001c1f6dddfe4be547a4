@@ -10,23 +10,23 @@ public class Biblioteca {
 	public static void main(String[] args) {
 		int op = -1;
 		while(op!= 0) {
-			System.out.println("Selecione a opção... \n 1. Adicionar livro \n 2. Mostrar livro no topo \n 3.Desempilhar livro (remover)");
+			System.out.println("Selecione a opção...");
 			op = Integer.parseInt(sc.nextLine());
 			switch (op) {
 			case 1:
-				empilhar();
+				inserir();
 				break;
 			case 2: 
 				System.out.println(mostrar());
 				break;
 			case 3:
-				desempilhar();
+				pop();
 				break;
 			}
 		}
 	}
 
-	public static void empilhar() {
+	public static void inserir() {
 		if(livros.tamanho <= 2) {
 			Livro livro = new Livro();
 			System.out.println("Nome");
@@ -39,7 +39,7 @@ public class Biblioteca {
 			livro.autor = sc.nextLine();
 			livros.push(livro);
 		} else System.out.println("Capacidade da pilha excedida.");
-
+		
 	}
 
 
@@ -53,7 +53,7 @@ public class Biblioteca {
 			livroTopo += "\n"+	liv.autor;
 
 			return livroTopo;
-
+			
 		} catch (Exception e) {
 			if(livros.estaVazia()) {
 				System.out.println("Lista está vazia. Selecione a opção '1' para inserir um livro na biblioteca.");
@@ -61,15 +61,10 @@ public class Biblioteca {
 		}
 		return "";
 	}
-
-	public static void desempilhar() {
-		try {
-			System.out.println("Desempilhando Livro: " + livros.pop().nome);
-
-		} catch (Exception e) {
-			if(livros.estaVazia()) {
-				System.out.println("Lista está vazia. Selecione a opção '1' para inserir um livro na biblioteca.");
-			}else System.out.println(e);}
+	
+	public static void pop() {
+		System.out.println("popping book: " + livros.pop().nome);
+		
 	}
 }
 
