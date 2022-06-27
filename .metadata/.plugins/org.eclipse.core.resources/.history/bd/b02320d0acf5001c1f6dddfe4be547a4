@@ -10,7 +10,7 @@ public class Biblioteca {
 	public static void main(String[] args) {
 		int op = -1;
 		while(op!= 0) {
-			System.out.println("Selecione a opção... \n 1. Adicionar livro \n 2. Mostrar livro no topo \n 3. Desempilhar livro (remover)");
+			System.out.println("Selecione a opção... \n 1. Adicionar livro \n 2. Mostrar livro no topo \n 3.Desempilhar livro (remover)");
 			op = Integer.parseInt(sc.nextLine());
 			switch (op) {
 			case 1:
