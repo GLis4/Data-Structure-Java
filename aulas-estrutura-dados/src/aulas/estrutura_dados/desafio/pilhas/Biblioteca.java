@@ -27,19 +27,23 @@ public class Biblioteca {
 	}
 
 	public static void empilhar() {
-		if(livros.tamanho <= 2) {
-			Livro livro = new Livro();
-			System.out.println("Nome");
-			livro.nome = sc.nextLine();
-			System.out.println("isbn");
-			livro.isbn = Integer.parseInt(sc.nextLine());
-			System.out.println("ano de lancamento");
-			livro.lancamento = Integer.parseInt(sc.nextLine());
-			System.out.println("autor");
-			livro.autor = sc.nextLine();
-			livros.push(livro);
-		} else System.out.println("Capacidade da pilha excedida.");
+		try {
+			if(livros.tamanho <= 20) {
+				Livro livro = new Livro();
+				System.out.println("Nome");
+				livro.nome = sc.nextLine();
+				System.out.println("isbn");
+				livro.isbn = Integer.parseInt(sc.nextLine());
+				System.out.println("ano de lancamento");
+				livro.lancamento = Integer.parseInt(sc.nextLine());
+				System.out.println("autor");
+				livro.autor = sc.nextLine();
+				livros.push(livro);
+			} else System.out.println("Capacidade da pilha excedida.");
 
+		} catch (Exception e) {
+			System.out.println("Houve um erro, favor tentar novamente...");
+		}
 	}
 
 

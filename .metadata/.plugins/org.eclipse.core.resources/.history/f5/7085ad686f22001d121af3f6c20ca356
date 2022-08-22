@@ -10,24 +10,24 @@ public class Biblioteca {
 	public static void main(String[] args) {
 		int op = -1;
 		while(op!= 0) {
-			System.out.println("Selecione a opção...");
+			System.out.println("Selecione a opção... \n 1. Adicionar livro \n 2. Mostrar livro no topo \n 3. Desempilhar livro (remover)");
 			op = Integer.parseInt(sc.nextLine());
 			switch (op) {
 			case 1:
-				inserir();
+				empilhar();
 				break;
 			case 2: 
 				System.out.println(mostrar());
 				break;
 			case 3:
-				pop();
+				desempilhar();
 				break;
 			}
 		}
 	}
 
-	public static void inserir() {
-		if(livros.tamanho <= 2) {
+	public static void empilhar() {
+		if(livros.tamanho <= 20) {
 			Livro livro = new Livro();
 			System.out.println("Nome");
 			livro.nome = sc.nextLine();
@@ -62,9 +62,9 @@ public class Biblioteca {
 		return "";
 	}
 
-	public static void pop() {
+	public static void desempilhar() {
 		try {
-			System.out.println("popping book: " + livros.pop().nome);
+			System.out.println("Desempilhando Livro: " + livros.pop().nome);
 
 		} catch (Exception e) {
 			if(livros.estaVazia()) {
