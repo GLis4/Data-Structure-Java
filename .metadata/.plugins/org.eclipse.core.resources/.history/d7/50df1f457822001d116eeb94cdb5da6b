@@ -1,0 +1,21 @@
+package aulas.estrutura_dados.desafio.pilhas;
+
+import java.util.Stack;
+
+public class SimbolosBalanceados {
+
+	public static void main(String[] args) {
+		String spli = "((A))";
+		String[] splitted = spli.split("()");
+		System.out.println(splitted[4]);
+		Stack<String> stack = new Stack<String>();
+		
+		for(int i = 0; i < spli.length(); i++) {
+			
+			stack.push(splitted[i].toString());
+			System.out.println(stack.pop());
+		}
+	}
+
+}
+

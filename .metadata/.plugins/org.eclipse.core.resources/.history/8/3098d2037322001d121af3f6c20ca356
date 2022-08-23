@@ -1,0 +1,25 @@
+package aulas.estrutura_dados.desafio.pilhas;
+
+import java.util.Stack;
+
+public class SimbolosBalanceados {
+
+	public static void main(String[] args) {
+		String expressao = "((A+B)";
+		Stack<String[]> stack = new Stack<String[]>();
+
+		for(int i =0; i< expressao.length(); i++) {
+			String[] cha = expressao.split(expressao);
+			stack.push(cha);
+		}	
+		
+		System.out.println(stack.containsAll(stack));
+	}
+
+
+	public static void checar() {
+
+	}
+
+}
+

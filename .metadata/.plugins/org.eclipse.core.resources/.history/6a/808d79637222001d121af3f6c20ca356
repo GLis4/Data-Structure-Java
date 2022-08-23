@@ -1,0 +1,16 @@
+package aulas.estrutura_dados.desafio.pilhas;
+
+public class SimbolosBalanceados {
+
+	public static void main(String[] args) {
+		String expressao = "((A+B)";
+		String parentese = "( )";
+		System.out.println(expressao.contains(parentese));
+		
+	}
+	public static void checar() {
+		
+	}
+
+}
+
