@@ -1,0 +1,20 @@
+package aulas.estrutura_dados.desafio.pilhas;
+
+public class ConversaoDecimalBinario {
+
+	public static void main(String[] args) {
+		int q= 0;
+		int number = 27;
+		int resto = 0;
+		String binary ="";
+		
+		while(number<2) {
+			resto = number%2;
+			q = number/2;
+			binary = String.valueOf(resto);
+		}
+		
+		System.out.println(binary);
+		
+	}
+}

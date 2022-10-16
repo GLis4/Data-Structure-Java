@@ -1,0 +1,20 @@
+package aulas.estrutura_dados.desafio.pilhas;
+
+import java.util.Stack;
+
+public class ConversaoDecimalBinario {
+
+	public static void main(String[] args) {
+		int q= 0;
+		int number = 27;
+		Stack<Integer> resto = new Stack<Integer>();
+		
+		
+		while(q<2) {
+			resto.add(number%2);
+			q = number/2;
+			
+		}
+		System.out.println(resto.toString());
+	}
+}

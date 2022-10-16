@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;p&apos; in &apos;aulas.estrutura_dados.desafio.pilhas.SimbolosBalanceados.main(...)&apos; to &apos;c&apos;&#x0D;&#x0A;- Original project: &apos;aulas-estrutura-dados&apos;&#x0D;&#x0A;- Original element: &apos;aulas.estrutura_dados.desafio.pilhas.SimbolosBalanceados.main(String[]).p&apos;&#x0D;&#x0A;- Renamed element: &apos;p&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;p&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;aulas.estrutura_dados.desafio.pilhas{SimbolosBalanceados.java[SimbolosBalanceados~main~\[QString;@p!223!232!227!227!I!0!false" name="c" references="true" stamp="1663612151538" version="1.0"/>
+</session>

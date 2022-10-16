@@ -1,28 +1,53 @@
 package aulas.estrutura_dados.desafio.pilhas;
 
+import java.util.Scanner;
+
 public class SimbolosBalanceados {
 
+	static	int o = 0;
+	static	int c = 0;
+
 	public static void main(String[] args) {
-		String spli = "((B+C))";
-		String[] splitted = spli.split("()");
-		
-		int o = 0;
-		int p = 0;
-		
-		for(int i = 0; i < spli.length(); i++) {
-			
+
+		checarSeBalanceados();
+	} public static String[] separarParenteses( String expression){
+
+		String[] splitted = expression.split("()");
+
+		return splitted;
+
+	} public static void contarParenteses(String expression, String[] splitted) {
+		for(int i = 0; i < expression.length(); i++) {
+
 			if (splitted[i].equals("(")) {
 				o++; 
 			}else if(splitted[i].equals(")")) {
-				p++;
+				c++;
 			}
 		}
-		
-		if(o == p && splitted[0].contains("(")) {
-			System.out.println("balanced");
-		}else System.out.println("not balanced");
-		
-	}
+	} public static void checarSeBalanceados() {
+
+		String spli = resgatarExpressao();
+		String[] splitted = separarParenteses(spli);
+
+		contarParenteses(spli, splitted);
+
+		if(o == c && splitted[0].contains("(") && splitted[spli.length()-1].contains(")") ) {
+			System.out.println("balanceado.");
+		}else if(o==0 && c==0) {
+			System.out.println("não e uma expressao com parenteses.");
+		} else {
+			System.out.println("Não balanceado.");
+		}
+
+	} public static String resgatarExpressao() {
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("Expressão para ver se os parenteses estão balanceados:");
+		String expressao = sc.nextLine();
+		sc.close();
+		return expressao;
+	}  
 
 }
 
